@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #fe5b3e;
+  --text-dark: #0d0d0d;
+  --text-light: #343434;
+  --white: #ffffff;
+}
+
+body {
+  font-size: 18px;
+  font-family: "poppins", "helvetica";
+  line-height: 1rem;
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 3em;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.nav-items ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fe5b3e;
+  position: fixed;
+  transition: 0.3s;
+}
+
+.nav-items ul a:hover {
+  color: var(--primary-color);
+  transition: 0.4s ease;
+}
+
+.nav-items.active {
+  left: 0;
+}
+
+.nav-items ul a {
+  color: var(--white);
+}
+
+.nav-bar.active {
+  left: 0;
+}
+
+.hamburger-menu {
+  background-color: var(--primary-color);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3em;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  height: 80vh;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
+
+.hero-content {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.hero-content h1 {
+  text-align: center;
+  font-size: 12.5vw;
+  line-height: 1;
+  font-weight: 700;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.middle-section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3em;
+}
+
+.hero-image {
+  height: 30em; /* Make the image smaller vertically */
+  max-width: 40%; /* Reduce the image width */
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+.p1 {
+  color: #1d1d1d;
+  text-align: left;
+  width: 20%;
+}
+
+.p2 {
+  color: #1d1d1d;
+  text-align: center;
+  width: 20%;
+}
+
+button {
+  width: auto;
+  min-width: 200px;
+  padding: 1rem;
+  font-size: 18px;
+  letter-spacing: 0em;
+  background-color: #fe5b3e;
+  color: #ffffff;
+  border: none;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: var(--text-dark);
+  transition: 0.4s ease;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 2em;
+  }
+}
+
+.hamburger-menu {
+  display: flex;
+  color: var(--white);
+}
+
+@media (min-width: 769px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3em;
+  }
+  .nav-items {
+    position: static;
+    padding: 0;
+    background-color: var(--primary-color);
+    align-items: end;
+    background-color: transparent;
+  }
+  .nav-items ul {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+  }
+  .nav-items ul a {
+    color: var(--text-dark);
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .header-container button {
+    display: none;
+  }
+}
